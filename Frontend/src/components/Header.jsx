@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navAnimation } from "../animations/headerAnimation";
 import gsap from "gsap";
 import Logo from "../assets/Img/Favicon.png";
+import Resume from "../assets/pdf/NitishSharmaResume.pdf";
 
 function Header() {
   const location = useLocation();
@@ -40,7 +41,10 @@ function Header() {
           </svg>
           <p>
             The Source Code is{" "}
-            <Link to="https://github.com/nikku1229" target="_blank">
+            <Link
+              to="https://github.com/nikku1229/My_Portfolio"
+              target="_blank"
+            >
               Free for everyone
             </Link>
           </p>
@@ -90,7 +94,9 @@ function Header() {
                 </Link>
               </li>
             </ul>
-            <button className="primary-btn btn">Resume</button>
+            <Link to={Resume} target="_blank">
+              <button className="primary-btn btn">Resume</button>
+            </Link>
           </nav>
         </div>
       </header>

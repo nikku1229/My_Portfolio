@@ -186,6 +186,20 @@ p {
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--orange-variant-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange-variant-1);
+  cursor: pointer;
+}
+
 .seperator {
   height: 1px;
   width: 100%;
@@ -329,66 +343,68 @@ header {
   }
 }
 
-.hero-shape-block {
+.start-animate {
+  position: absolute;
   width: 100%;
-  height: 150px;
-  background-color: #004030;
-  position: relative;
-  display: flex;
-  align-items: end;
-  justify-content: end;
+  height: 100%;
+}
+
+.clover {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.clover span {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, var(--orange), var(--orange-variant-2));
+}
+
+.t_left {
+  border-radius: 50% 50% 0 50%;
+}
+
+.t_right {
+  border-radius: 50% 50% 0 50%;
+  transform: rotateY(180deg);
+}
+
+.b_left {
+  border-radius: 50% 0% 50% 50%;
+}
+
+.b_right {
+  transform: rotateY(180deg);
+  border-radius: 50% 0% 50% 50%;
+}
+
+.hero-shape-block {
+  position: absolute;
+  width: 200px;
+  height: 200px;
 
   .hero-shape {
-    position: absolute;
-    width: 400px;
+    display: flex;
+    width: 100%;
     height: 100%;
-    background-color: #143753;
-  }
-
-  .hero-shape-bullet {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: #f4f5f6;
-    border-radius: 50%;
-  }
-
-  .clover {
-    position: relative;
-  }
-
-  .clover span {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(
-      to right,
-      var(--orange),
-      var(--orange-variant-2)
-    );
-    position: absolute;
-  }
-
-  .t_left {
-    border-radius: 50% 50% 0 50%;
-    left: -30px;
-    top: 0px;
-  }
-
-  .t_right {
-    border-radius: 50% 50% 50% 0%;
-    right: -30px;
-    top: 0px;
-  }
-
-  .b_left {
-    border-radius: 50% 0% 50% 50%;
-    left: -30px;
-    top: 30px;
-  }
-
-  .b_right {
-    border-radius: 0% 50% 50% 50%;
-    right: -30px;
-    top: 30px;
+    background: var(--pink-variant-2);
+    aspect-ratio: 1;
+    --g: /30.26% 30.26% radial-gradient(#000 calc(71% - 1px), #0000 71%)
+      no-repeat;
+    mask:
+      100% 50% var(--g),
+      81.174% 89.092% var(--g),
+      38.874% 98.746% var(--g),
+      4.952% 71.694% var(--g),
+      4.952% 28.306% var(--g),
+      38.874% 1.254% var(--g),
+      81.174% 10.908% var(--g),
+      radial-gradient(100% 100%, #000 31.417%, #0000 calc(31.417% + 1px));
   }
 }
