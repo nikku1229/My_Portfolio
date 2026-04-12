@@ -1,6 +1,9 @@
 import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const heroAnimation = (heroBlock) => {
   if (!heroBlock) return;
@@ -221,6 +224,12 @@ export const lastNameAnimation = (nameAnimate) => {
     )
     .from(mElement, {
       opacity: 0,
+    })
+    .to(mElement, {
+      y: -50,
+      repeat: -1,
+      yoyo: true,
+      duration: 2,
     });
 };
 
@@ -275,10 +284,10 @@ export const scrollFlowerAnimation = (flower) => {
   gsap.to(flowerRound, {
     x: 700,
     rotateZ: -360,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: flowerRound,
       scroller: "body",
-      ease: "power2.out",
       start: "top 30%",
       end: "top 0%",
       scrub: 3,

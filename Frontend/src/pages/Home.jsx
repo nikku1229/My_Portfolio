@@ -1,16 +1,63 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-
-gsap.registerPlugin(ScrollTrigger);
+import { bioAnimation, bioBackAnimation } from "../animations/bioAnimation";
 
 const Home = () => {
+  const bioRef = useRef();
+  const bioBackRef = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      bioAnimation(bioRef.current);
+      bioBackAnimation(bioBackRef.current);
+    }, bioRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <Header />
       <Hero />
+      <div className="seperator wide-width"></div>
+      <div className="home-bio-container wide-width">
+        <div className="bioAnimate-section" ref={bioBackRef}>
+          <div className="semicircle">
+            <div className="semi-half"></div>
+            <div className="semi-half"></div>
+          </div>
+        </div>
+        <div className="bio-header">
+          <h2>#Bio</h2>
+        </div>
+        <div className="bio-details" ref={bioRef}>
+          <h3>
+            <span className="h3-f">
+              Full Stack <span className="detail-highlight">Web Developer</span>{" "}
+              specializing in the{" "}
+              <span className="detail-highlight">
+                MERN Stack and AI integration
+              </span>
+              , crafting scalable, high-performance web experiences that blend
+              clean code with intelligent automation.
+            </span>{" "}
+            <span className="h3-s">
+              Passionate about building end-to-end web solutions — from
+              architecting solid backend APIs with{" "}
+              <span className="detail-highlight">Node.js and Express.js</span>,
+              to delivering sharp, responsive frontends with React.js
+            </span>{" "}
+            <span className="h3-t">
+              — with a strong focus on real-world impact and seamless user
+              experience.
+            </span>
+          </h3>
+        </div>
+      </div>
+      <div className="seperator wide-width"></div>
+      <div className="space-100"></div>
     </>
   );
 };
