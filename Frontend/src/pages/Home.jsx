@@ -1,8 +1,9 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { bioAnimation, bioBackAnimation } from "../animations/bioAnimation";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import { bioAnimation, bioBackAnimation } from "../animations/bioAnimation";
+import ScrollerSlider from "../components/ScrollerSlider";
 
 const Home = () => {
   const bioRef = useRef();
@@ -35,7 +36,7 @@ const Home = () => {
         <div className="bio-details" ref={bioRef}>
           <h3>
             <span className="h3-f">
-              Full Stack <span className="detail-highlight">Web Developer</span>{" "}
+              <span className="detail-highlight">Full Stack Web Developer</span>{" "}
               specializing in the{" "}
               <span className="detail-highlight">
                 MERN Stack and AI integration
@@ -57,7 +58,12 @@ const Home = () => {
         </div>
       </div>
       <div className="seperator wide-width"></div>
-      <div className="space-100"></div>
+      <ScrollerSlider />
+      <div className="space-bottom"></div>
+      <div className="space-bottom"></div>
+      <div className="space-bottom"></div>
+      <div className="space-bottom"></div>
+      <div className="space-bottom"></div>
     </>
   );
 };

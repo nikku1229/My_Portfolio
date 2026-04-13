@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 
+.space-bottom {
+  margin-bottom: 100px;
+}
+
 :root {
   --dark: #0c0c0c;
   --dark-grey: #111111;
@@ -465,13 +469,9 @@ header {
   }
 }
 
-.space-100 {
-  margin-bottom: 100px;
-}
-
 .bioAnimate-section {
   position: absolute;
-  width: 90vw;
+  width: 99vw;
   height: 60vh;
   z-index: 0;
 }
@@ -491,5 +491,61 @@ header {
       rgba(110, 140, 142, 0.4) 30%,
       rgba(219, 141, 208, 0.4) 100%
     );
+  }
+}
+
+/* HOME-SCROLLER-SLIDER */
+.scroller-section {
+  padding: 100px 15px;
+  height: 90vh;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+
+  .scroller-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+  }
+
+  .scroller-div-start {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 60vh;
+    color: var(--white-variant-1);
+    font-family: var(--primary-font-family);
+  }
+
+  .tags-block:nth-child(1) {
+    position: relative;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: var(--red);
+    color: var(--dark);
+    z-index: 1;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .tags-block:nth-child(2) {
+    position: relative;
+    top: -20px;
+    left: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    color: var(--dark);
+
+    p {
+      font-size: 30px;
+      line-height: 1;
+    }
   }
 }
