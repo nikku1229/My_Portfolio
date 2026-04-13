@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { scrollerAnimation } from "../animations/scrollerAnimation";
 
@@ -15,8 +16,8 @@ function ScrollerSlider() {
 
   return (
     <>
-      <div className="scroller-section wide-width">
-        <div className="scroller-container" ref={scrollerRef}>
+      <div className="scroller-section" ref={scrollerRef}>
+        <div className="scroller-container">
           <div className="scroller-div-start">
             <div className="tags-block tag-block1">
               <svg
@@ -49,9 +50,12 @@ function ScrollerSlider() {
             <span>e</span>
             <span>l</span>
           </h2>
-          <h2 className="h2">Free</h2>
-          <h2 className="h2">to</h2>
-          <h2 className="h2">Reach</h2>
+          <h2 className="h21">Free</h2>
+          <h2 className="h22">to</h2>
+          <h2 className="h23">Reach</h2>
+          <Link to="/contact-me" className="btn">
+            <button className="primary-btn">Get in touch</button>
+          </Link>
         </div>
       </div>
     </>

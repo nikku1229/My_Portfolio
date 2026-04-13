@@ -1,26 +1,32 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TextPlugin);
 
 export const scrollerAnimation = (animate) => {
   if (!animate) return;
 
-  const h2s = animate.querySelectorAll(".h2");
+  const scrollerContainer = animate.querySelector(".scroller-container");
+  const h21 = animate.querySelector(".h21");
+  const h22 = animate.querySelector(".h22");
+  const h23 = animate.querySelector(".h23");
   const spans = animate.querySelectorAll("h2 span");
   const tagBlock1 = animate.querySelector(".tag-block1");
   const tagBlock2 = animate.querySelector(".tag-block2");
+  const linkButton = animate.querySelector(".btn");
 
-  gsap.to(animate, {
-    transform: "translateX(-120%)",
+  gsap.to(scrollerContainer, {
+    x: "-80%",
+    ease: "none",
     scrollTrigger: {
       trigger: animate,
-      start: "top 15%",
-      end: "top -100%",
-      pin: true,
+      start: "top 0%",
+      end: "top -50%",
       scrub: 2,
+      pin: true,
+      pinSpacing: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     },
   });
 
@@ -31,8 +37,8 @@ export const scrollerAnimation = (animate) => {
     opacity: 0,
     scrollTrigger: {
       trigger: animate,
-      start: "top 50%",
-      end: "top 10%",
+      start: "top 30%",
+      end: "top 0%",
       toggleActions: "play none none reverse",
     },
   });
@@ -44,8 +50,8 @@ export const scrollerAnimation = (animate) => {
     ease: "power3.out",
     scrollTrigger: {
       trigger: animate,
-      start: "top 50%",
-      end: "top 10%",
+      start: "top 30%",
+      end: "top 0%",
       toggleActions: "play none none reverse",
     },
   });
@@ -54,26 +60,69 @@ export const scrollerAnimation = (animate) => {
     y: -60,
     opacity: 0,
     ease: "back.out(1.7)",
-    stagger: 0.1,
+    stagger: 0.2,
     scrollTrigger: {
-      trigger: spans,
-      start: "top 45%",
-      end: "top 30%",
+      trigger: animate,
+      start: "top 20%",
+      end: "top -20%",
       scrub: 3,
       toggleActions: "play none none reverse",
     },
   });
 
-  gsap.from(h2s, {
-    y: -60,
+  gsap.from(h21, {
+    y: -80,
     opacity: 0,
     ease: "back.out(1.7)",
-    stagger: 0.1, 
     scrollTrigger: {
-      trigger: spans,
-      start: "top 10%",
+      trigger: animate,
+      start: "top 15%",
       end: "top -30%",
       scrub: 3,
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  gsap.from(h22, {
+    x: -1200,
+    ease: "power1.out",
+    opacity: 0,
+    zIndex: "-1",
+    scrollTrigger: {
+      trigger: animate,
+      start: "top 0%",
+      end: "top -30%",
+      scrub: 3,
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  gsap.from(h23, {
+    x: -1200,
+    ease: "back.out(1.7)",
+    scale: 1.5,
+    opacity: 0,
+    zIndex: "-1",
+    scrollTrigger: {
+      trigger: animate,
+      start: "top 0%",
+      end: "top -20%",
+      scrub: 3,
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  gsap.from(linkButton, {
+    x: -1200,
+    ease: "power1.out",
+    opacity: 0,
+    scale: 3,
+    rotate: -90,
+    scrollTrigger: {
+      trigger: animate,
+      start: "top 10%",
+      end: "top -50%",
+      scrub: 2,
       toggleActions: "play none none reverse",
     },
   });

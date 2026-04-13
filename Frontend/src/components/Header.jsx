@@ -50,7 +50,7 @@ function Header() {
           </p>
         </div>
 
-        <div className="nav wide-width">
+        <div className="nav">
           <div className="logo" onClick={() => navigate("/")}>
             <img src={Logo} alt="Logo" />
           </div>

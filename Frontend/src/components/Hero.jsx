@@ -26,7 +26,7 @@ function Hero() {
 
   return (
     <>
-      <section className="wide-width hero-container">
+      <section className="hero-container">
         <div className="hero-block">
           <div className="start-animate" ref={flowerRef}>
             <div className="clover">

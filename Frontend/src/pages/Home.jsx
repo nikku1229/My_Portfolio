@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { bioAnimation, bioBackAnimation } from "../animations/bioAnimation";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import ScrollerSlider from "../components/ScrollerSlider";
 
@@ -22,8 +23,8 @@ const Home = () => {
     <>
       <Header />
       <Hero />
-      <div className="seperator wide-width"></div>
-      <div className="home-bio-container wide-width">
+      <div className="seperator"></div>
+      <div className="home-bio-container">
         <div className="bioAnimate-section" ref={bioBackRef}>
           <div className="semicircle">
             <div className="semi-half"></div>
@@ -57,13 +58,9 @@ const Home = () => {
           </h3>
         </div>
       </div>
-      <div className="seperator wide-width"></div>
+      <div className="seperator"></div>
       <ScrollerSlider />
-      <div className="space-bottom"></div>
-      <div className="space-bottom"></div>
-      <div className="space-bottom"></div>
-      <div className="space-bottom"></div>
-      <div className="space-bottom"></div>
+      <Footer />
     </>
   );
 };
