@@ -1,15 +1,30 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const [message, setMessage] = useState("");
+
+  const handleMessageSubmission = (e) => {
+    e.preventDefault();
+
+    alert("message send successful");
+  };
+
   return (
     <>
       <div className="footer-container">
         <div className="footer-section">
           <div className="footer-form">
             <h2>Feel Free to contact</h2>
-            <form>
-              <input type="text" placeholder="Email Address" />
-              <button>
+            <form onSubmit={handleMessageSubmission}>
+              <input
+                type="text"
+                name="message"
+                placeholder="Enter Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <button type="submit">
                 <svg
                   className="w-6 h-6 text-gray-800 dark:text-white"
                   aria-hidden="true"
@@ -143,7 +158,7 @@ function Footer() {
           <p>&copy; 2026 Nitish Sharma - Portfolio. All Right Reserved</p>
           <p>
             <Link to="privacy-policy" target="_blank">
-              Pricy policy
+              Privacy policy
             </Link>
             <Link to="term-contact" target="_blank">
               Term of contact

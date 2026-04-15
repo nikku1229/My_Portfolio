@@ -550,6 +550,15 @@ header {
   }
 }
 
+/* HOME-THOUGHTS */
+.thoughts-container {
+  width: 100%;
+  align-self: center;
+  padding: 50px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* FOOTER */
 .footer-container {
   width: 100%;

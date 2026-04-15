@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import ScrollerSlider from "../components/ScrollerSlider";
+import Thoughts from "../components/Thoughts";
 
 const Home = () => {
   const bioRef = useRef();
@@ -60,6 +61,7 @@ const Home = () => {
       </div>
       <div className="seperator"></div>
       <ScrollerSlider />
+      <Thoughts />
       <Footer />
     </>
   );

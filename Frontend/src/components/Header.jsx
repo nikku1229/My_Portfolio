@@ -68,7 +68,7 @@ function Header() {
               <li>
                 <Link
                   to="/about"
-                  className={location.pathname === "/about/*" ? "active" : ""}
+                  className={location.pathname === "/about" ? "active" : ""}
                 >
                   About
                 </Link>
@@ -76,18 +76,16 @@ function Header() {
               <li>
                 <Link
                   to="/projects"
-                  className={
-                    location.pathname === "/projects/*" ? "active" : ""
-                  }
+                  className={location.pathname === "/projects" ? "active" : ""}
                 >
                   Projects
                 </Link>
               </li>
               <li>
                 <Link
-                  to="contact-me"
+                  to="/contact-me"
                   className={
-                    location.pathname === "/contact-me/*" ? "active" : ""
+                    location.pathname === "/contact-me" ? "active" : ""
                   }
                 >
                   Contact me
