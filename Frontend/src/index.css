@@ -491,7 +491,6 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
   will-change: transform;
   align-items: center;
 
@@ -509,6 +508,7 @@ header {
     flex-shrink: 0;
     gap: 50px;
     position: relative;
+    overflow: hidden;
   }
 
   .scroller-div-start {
@@ -554,9 +554,101 @@ header {
 .thoughts-container {
   width: 100%;
   align-self: center;
-  padding: 50px 25px;
+  padding: 0px 25px 100px 25px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  .thought-head h2 {
+    font-size: 1.75rem;
+    font-family: var(--primary-font-family);
+  }
+
+  button {
+    width: 70px;
+    height: 70x;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    z-index: 2;
+
+    svg {
+      width: 20px;
+      height: 40px;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    max-width: 1024px;
+  }
+
+  .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .right {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  .carousel-block {
+    align-self: center;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 250px;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card {
+    position: relative;
+    width: 340px;
+    height: 200px;
+    border: 1px solid var(--orange-variant-1);
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    padding: 20px;
+    flex-shrink: 0;
+    z-index: 0;
+    filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: var(--text-font-family);
+    transform: translateX(80%);
+    transition: all 0.5s ease-in-out;
+
+    h3 {
+      width: 100%;
+    }
+
+    p {
+      align-self: flex-end;
+      font-size: 14px;
+    }
+  }
+
+  .card.active {
+    scale: 1.2;
+    filter: blur(0);
+    z-index: 1;
+    box-shadow: 1px 1px 5px var(--orange-variant-2);
+  }
 }
 
 /* FOOTER */

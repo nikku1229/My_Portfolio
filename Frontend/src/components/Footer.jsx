@@ -8,6 +8,7 @@ function Footer() {
     e.preventDefault();
 
     alert("message send successful");
+    setMessage("");
   };
 
   return (
@@ -23,6 +24,7 @@ function Footer() {
                 placeholder="Enter Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                required
               />
               <button type="submit">
                 <svg
