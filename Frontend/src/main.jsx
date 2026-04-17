@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
 import Lenis from "@studio-freight/lenis";
+import App from "./App.jsx";
+import { AnchorProvider } from "./context/AnchorContext.jsx";
 import "./index.css";
 
 const lenis = new Lenis({
@@ -17,7 +18,7 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <AnchorProvider>
     <App />
-  </StrictMode>,
+  </AnchorProvider>,
 );

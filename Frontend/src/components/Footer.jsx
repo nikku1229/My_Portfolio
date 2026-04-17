@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useAnchor } from "../context/AnchorContext";
 
 function Footer() {
+  const { scrollToSection } = useAnchor();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [message, setMessage] = useState("");
 
   const handleMessageSubmission = (e) => {
@@ -9,6 +14,14 @@ function Footer() {
 
     alert("message send successful");
     setMessage("");
+  };
+
+  const handleQuotesClick = () => {
+    if (location.pathname === "/") {
+      scrollToSection("quotes");
+    } else {
+      navigate("/", { state: { scrollTo: "quotes" } });
+    }
   };
 
   return (
@@ -81,9 +94,9 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="link7" to="/#thoughts">
-                  Thoughts
-                </Link>
+                <div className="link7" onClick={handleQuotesClick}>
+                  Quotes
+                </div>
               </li>
             </ul>
           </div>
@@ -159,10 +172,10 @@ function Footer() {
         <div className="copywrite-section">
           <p>&copy; 2026 Nitish Sharma - Portfolio. All Right Reserved</p>
           <p>
-            <Link to="privacy-policy" target="_blank">
+            <Link to="/privacy-policy" target="_blank">
               Privacy policy
             </Link>
-            <Link to="term-contact" target="_blank">
+            <Link to="/term-contact" target="_blank">
               Term of contact
             </Link>
           </p>

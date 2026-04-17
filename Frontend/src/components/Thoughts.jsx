@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { getThoughts } from "../service/thoughtsApi";
+import { useAnchor } from "../context/AnchorContext";
 
 function Thoughts() {
+  const { quoteRef } = useAnchor();
   const [index, setIndex] = useState(0);
   const [thougts, setThoughts] = useState([]);
 
@@ -39,7 +41,7 @@ function Thoughts() {
 
   return (
     <>
-      <div className="thoughts-container" id="thoughts">
+      <div className="thoughts-container" ref={quoteRef}>
         <div className="thought-head">
           <h2>Quotes</h2>
         </div>
@@ -107,7 +109,25 @@ function Thoughts() {
         ) : (
           <>
             <div className="empty-thought-block">
-              <h3>No thoughts to display</h3>
+              <svg
+                className="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m4.988 19.012 5.41-5.41m2.366-6.424 4.058 4.058-2.03 5.41L5.3 20 4 18.701l3.355-9.494 5.41-2.029Zm4.626 4.625L12.197 6.61 14.807 4 20 9.194l-2.61 2.61Z"
+                />
+              </svg>
+
+              <h3>No quote to display</h3>
             </div>
           </>
         )}

@@ -652,6 +652,12 @@ header {
   }
 }
 
+.empty-thought-block {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+
 /* FOOTER */
 .footer-container {
   width: 100%;
@@ -718,6 +724,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    li {
+      font-family: var(--primary-font-family);
+      cursor: pointer;
+    }
   }
 
   a {
@@ -763,8 +774,10 @@ header {
     color: var(--red);
   }
 
-  a:hover {
+  a:hover,
+  li:hover {
     font-weight: 600;
+    transition: all 0.3s;
   }
 
   .link1:hover {

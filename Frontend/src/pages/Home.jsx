@@ -1,5 +1,7 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import gsap from "gsap";
+import { useAnchor } from "../context/AnchorContext";
 import { bioAnimation, bioBackAnimation } from "../animations/bioAnimation";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,6 +12,8 @@ import Thoughts from "../components/Thoughts";
 const Home = () => {
   const bioRef = useRef();
   const bioBackRef = useRef();
+  const location = useLocation();
+  const { scrollToSection } = useAnchor();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -19,6 +23,17 @@ const Home = () => {
 
     return () => ctx.revert();
   }, []);
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const section = location.state.scrollTo;
+
+      setTimeout(() => {
+        scrollToSection(section);
+        // window.history.replaceState({}, document.title);
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <>
