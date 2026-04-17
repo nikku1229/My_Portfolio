@@ -30,7 +30,7 @@ function Thoughts() {
 
   return (
     <>
-      <div className="thoughts-container">
+      <div className="thoughts-container" id="thoughts">
         <div className="thought-head">
           <h2>My Thoughts</h2>
         </div>
