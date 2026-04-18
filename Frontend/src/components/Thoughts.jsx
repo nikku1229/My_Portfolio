@@ -5,14 +5,18 @@ import { useAnchor } from "../context/AnchorContext";
 function Thoughts() {
   const { quoteRef } = useAnchor();
   const [index, setIndex] = useState(0);
-  const [thougts, setThoughts] = useState([]);
+  const [thoughts, setThoughts] = useState([]);
 
   const fetchThoughts = async () => {
     try {
       const data = await getThoughts();
-      setThoughts(data);
+
+      if (!Array.isArray(data)) throw new Error("Invalid data");
+
+      setThoughts(data || []);
     } catch (err) {
       console.error("Error fetching thoughts:", err);
+      setThoughts([]);
     }
   };
 
@@ -21,23 +25,24 @@ function Thoughts() {
   }, []);
 
   const nextSlide = () => {
-    if (thougts.length === 0) return;
-    setIndex((prev) => (prev + 1) % thougts.length);
+    if (!thoughts || thoughts.length === 0) return;
+    setIndex((prev) => (prev + 1) % thoughts.length);
   };
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + thougts.length) % thougts.length);
+    if (!thoughts || thoughts.length === 0) return;
+    setIndex((prev) => (prev - 1 + thoughts.length) % thoughts.length);
   };
 
   useEffect(() => {
-    if (thougts.length === 0) return;
+    if (!thoughts || thoughts.length === 0) return;
 
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % thougts.length);
+      setIndex((prev) => (prev + 1) % thoughts.length);
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [thougts]);
+  }, [thoughts]);
 
   return (
     <>
@@ -46,7 +51,7 @@ function Thoughts() {
           <h2>Quotes</h2>
         </div>
 
-        {thougts && thougts.length > 0 ? (
+        {thoughts && thoughts.length > 0 ? (
           <div className="carousel">
             <button className="left primary-btn" onClick={prevSlide}>
               <svg
@@ -73,8 +78,8 @@ function Thoughts() {
                 className="carousel-track"
                 style={{ transform: `translateX(-${index * 340}px)` }}
               >
-                {thougts &&
-                  thougts.map((item, i) => (
+                {thoughts &&
+                  thoughts.map((item, i) => (
                     <div
                       className={`card ${index === i ? "active" : ""}`}
                       key={i}

@@ -30,7 +30,7 @@ const Home = () => {
 
       setTimeout(() => {
         scrollToSection(section);
-        // window.history.replaceState({}, document.title);
+        window.history.replaceState({}, document.title);
       }, 100);
     }
   }, [location]);
