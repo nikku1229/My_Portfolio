@@ -808,3 +808,93 @@ header {
     color: var(--green);
   }
 }
+
+/* ABOUT PAGE  */
+.about-page-container {
+  width: 100%;
+  height: 85vh;
+  padding: 80px 25px;
+
+  .about-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      margin-top: 10px;
+    }
+
+    span {
+      width: max-content;
+      height: max-content;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 5rem;
+      color: var(--white-variant-1);
+    }
+
+    p {
+      font-size: 24px;
+      color: var(--orange-variant-2);
+      font-family: var(--text-font-family);
+    }
+  }
+
+  .about-animation {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-animate-flower {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    z-index: 1;
+
+    .flower-petal {
+      width: 70px;
+      height: 70px;
+      background-color: var(--pink-variant-2);
+    }
+
+    .petal1 {
+      border-radius: 50% 50% 0 50%;
+    }
+
+    .petal2 {
+      border-radius: 50% 50% 50% 0;
+    }
+
+    .petal3 {
+      border-radius: 50% 0 50% 50%;
+    }
+
+    .petal4 {
+      border-radius: 0 50% 50% 50%;
+    }
+  }
+
+  .about-animation-text {
+    position: absolute;
+    width: max-content;
+
+    h2 {
+      text-align: center;
+      z-index: 0;
+      font-family: var(--text-font-family);
+      color: var(--pink-variant-2);
+    }
+  }
+}
