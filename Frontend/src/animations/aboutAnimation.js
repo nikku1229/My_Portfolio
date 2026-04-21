@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const aboutAnimation = (about) => {
   if (!about) return;
@@ -60,4 +63,18 @@ export const aboutAnimation = (about) => {
       duration: 2,
       ease: "power2.inOut",
     });
+};
+
+export const aboutBioAnimation = (aboutBio) => {
+  const pElement = aboutBio.querySelector("p");
+
+  gsap.from(pElement, {
+    scrollTrigger: {
+      trigger: aboutBio,
+      start: "top 60%",
+    },
+    opacity: 0,
+    duration: 1,
+    y: 50,
+  });
 };

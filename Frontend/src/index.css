@@ -898,3 +898,100 @@ header {
     }
   }
 }
+
+.about-bio-container {
+  width: 100%;
+  padding: 80px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--white-variant-1);
+
+  span {
+    height: max-content;
+    overflow: hidden;
+  }
+
+  .about-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      font-size: 2rem;
+      color: var(--orange-variant-1);
+      font-family: var(--text-font-family);
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--dark-grey);
+      font-family: var(--text-font-family);
+      text-align: justify;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      display: flex;
+      gap: 10px;
+      align-self: center;
+    }
+
+    button:hover {
+      color: var(--orange-variant-1);
+    }
+  }
+}
+
+.education-container {
+  width: 100%;
+  padding: 80px 25px;
+
+  .education-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--orange-variant-1);
+    font-family: var(--text-font-family);
+  }
+
+  .tab-section {
+    display: flex;
+
+    .tab {
+      width: 280px;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white-variant-1);
+      color: var(--dark);
+      font-family: var(--primary-font-family);
+      cursor: pointer;
+      clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .tab.active {
+      background: var(--gradient-mid-orange);
+    }
+  }
+
+  .tab-content {
+    width: 100%;
+    padding: 10px 0px;
+  }
+}
