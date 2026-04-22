@@ -1,9 +1,13 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
-import { tabAnimation } from "../animations/educationAnimation";
+import React, { useState, useLayoutEffect, useRef, useEffect } from "react";
+import {
+  tabAnimation,
+  tabContentAnimation,
+} from "../animations/educationAnimation";
 import gsap from "gsap";
 
 function Education() {
   const tabRef = useRef(null);
+  const educationRef = useRef(null);
 
   const [selectedTab, setSelectedTab] = useState("Graduation");
 
@@ -14,6 +18,14 @@ function Education() {
 
     return () => ctx.revert();
   }, []);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tabContentAnimation(educationRef.current);
+    }, educationRef);
+
+    return () => ctx.revert();
+  }, [selectedTab]);
 
   return (
     <>
@@ -44,7 +56,7 @@ function Education() {
             </div>
           </div>
 
-          <div className="tab-content">
+          <div className="tab-content" ref={educationRef}>
             {selectedTab === "Secondary School" && (
               <div className="education-details">
                 <h3>Mathemathics</h3>
@@ -85,9 +97,8 @@ function Education() {
                 <p className="education-year">2022 - 2026</p>
                 <ul>
                   <li>
-                    Currently pursuing a B.Tech in Computer Science &
-                    Engineering at the Satyug Darshan Institute of Engineering &
-                    Technology.
+                    Currently pursuing B.Tech in Computer Science & Engineering
+                    at the Satyug Darshan Institute of Engineering & Technology.
                   </li>
                   <li>
                     my coursework focuses on essential technical domains,
