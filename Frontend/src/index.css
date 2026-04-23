@@ -421,6 +421,7 @@ header {
   position: relative;
 
   h2 {
+    font-size: 2rem;
     font-family: var(--text-font-family);
     font-weight: 800;
     color: var(--orange-variant-1);
@@ -560,8 +561,9 @@ header {
   position: relative;
 
   .thought-head h2 {
-    font-size: 1.75rem;
-    font-family: var(--primary-font-family);
+    font-size: 2rem;
+    font-family: var(--text-font-family);
+    color: var(--orange);
   }
 
   button {

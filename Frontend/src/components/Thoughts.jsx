@@ -39,7 +39,7 @@ function Thoughts() {
 
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % thoughts.length);
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [thoughts]);

@@ -6,25 +6,27 @@ import Experience3Logo from "../assets/Img/Freelence-logo.svg";
 import Experience4Logo from "../assets/Img/codesoft-logo.png";
 import gsap from "gsap";
 import { experienceListAnimation } from "../animations/experienceAnimation";
+import { useAnchor } from "../context/AnchorContext";
 
 function Experience() {
-  const experienceRef = useRef(null);
+  const experiencesRef = useRef(null);
+  const { experienceRef } = useAnchor();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      experienceListAnimation(experienceRef.current);
-    }, experienceRef);
+      experienceListAnimation(experiencesRef.current);
+    }, experiencesRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <>
-      <div className="experience-container">
+      <div className="experience-container" ref={experienceRef}>
         <div className="experience-section">
           <h2>#Experience</h2>
 
-          <div className="experience-list" ref={experienceRef}>
+          <div className="experience-list" ref={experiencesRef}>
             <ul>
               <li className="list">
                 <div className="experience-org-logo">

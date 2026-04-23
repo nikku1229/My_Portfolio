@@ -16,11 +16,11 @@ function Footer() {
     setMessage("");
   };
 
-  const handleQuotesClick = () => {
-    if (location.pathname === "/") {
-      scrollToSection("quotes");
+  const handleAnchorClick = (targetPath, section) => {
+    if (location.pathname === targetPath) {
+      scrollToSection(section);
     } else {
-      navigate("/", { state: { scrollTo: "quotes" } });
+      navigate(targetPath, { state: { scrollTo: section } });
     }
   };
 
@@ -60,6 +60,7 @@ function Footer() {
               </button>
             </form>
           </div>
+
           <div className="footer-nav-links">
             <h3>Reach Now</h3>
             <ul>
@@ -79,24 +80,36 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="link4" to="/about#skills">
+                <span
+                  className="link4"
+                  onClick={() => handleAnchorClick("/about", "skills")}
+                >
                   Skills
-                </Link>
+                </span>
               </li>
               <li>
-                <Link className="link5" to="/about#experience">
+                <span
+                  className="link5"
+                  onClick={() => handleAnchorClick("/about", "experience")}
+                >
                   Experience
-                </Link>
+                </span>
               </li>
               <li>
-                <Link className="link6" to="/about#education">
+                <span
+                  className="link6"
+                  onClick={() => handleAnchorClick("/about", "education")}
+                >
                   Education
-                </Link>
+                </span>
               </li>
               <li>
-                <div className="link7" onClick={handleQuotesClick}>
+                <span
+                  className="link7"
+                  onClick={() => handleAnchorClick("/", "quotes")}
+                >
                   Quotes
-                </div>
+                </span>
               </li>
             </ul>
           </div>

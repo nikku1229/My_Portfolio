@@ -4,10 +4,12 @@ import {
   tabContentAnimation,
 } from "../animations/educationAnimation";
 import gsap from "gsap";
+import { useAnchor } from "../context/AnchorContext";
 
 function Education() {
   const tabRef = useRef(null);
-  const educationRef = useRef(null);
+  const educationsRef = useRef(null);
+  const { educationRef } = useAnchor();
 
   const [selectedTab, setSelectedTab] = useState("Graduation");
 
@@ -21,15 +23,15 @@ function Education() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      tabContentAnimation(educationRef.current);
-    }, educationRef);
+      tabContentAnimation(educationsRef.current);
+    }, educationsRef);
 
     return () => ctx.revert();
   }, [selectedTab]);
 
   return (
     <>
-      <div className="education-container">
+      <div className="education-container" ref={educationRef}>
         <div className="education-section">
           <h2>#Education</h2>
 
@@ -56,7 +58,7 @@ function Education() {
             </div>
           </div>
 
-          <div className="tab-content" ref={educationRef}>
+          <div className="tab-content" ref={educationsRef}>
             {selectedTab === "Secondary School" && (
               <div className="education-details">
                 <h3>Mathemathics</h3>

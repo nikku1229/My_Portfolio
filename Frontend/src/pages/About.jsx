@@ -1,10 +1,11 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
+import { useAnchor } from "../context/AnchorContext";
 import {
   aboutAnimation,
   aboutBioAnimation,
@@ -15,6 +16,10 @@ function About() {
   const aboutRef = useRef(null);
   const aboutBioRef = useRef(null);
 
+  const location = useLocation();
+
+  const { scrollToSection } = useAnchor();
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       aboutAnimation(aboutRef.current);
@@ -23,6 +28,16 @@ function About() {
 
     return () => ctx.revert();
   }, []);
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const timer = setTimeout(() => {
+        scrollToSection(location.state.scrollTo);
+      }, 150);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location.state]);
 
   return (
     <>

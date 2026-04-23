@@ -26,14 +26,13 @@ const Home = () => {
 
   useEffect(() => {
     if (location.state?.scrollTo) {
-      const section = location.state.scrollTo;
+      const timer = setTimeout(() => {
+        scrollToSection(location.state.scrollTo);
+      }, 150);
 
-      setTimeout(() => {
-        scrollToSection(section);
-        window.history.replaceState({}, document.title);
-      }, 100);
+      return () => clearTimeout(timer);
     }
-  }, [location]);
+  }, [location.state]);
 
   return (
     <>
