@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 import {
   aboutAnimation,
   aboutBioAnimation,
@@ -122,6 +123,7 @@ function About() {
           </Link>
         </div>
       </div>
+      <Experience />
       <Skills />
       <Education />
       <Footer />

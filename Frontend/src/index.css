@@ -1032,7 +1032,7 @@ header {
 /* SKILLS SECTION */
 .skills-container {
   width: 100%;
-  padding: 80px 25px 0px 25px;
+  padding: 10px 25px 40px 25px;
   overflow: hidden;
 
   .skills-section {
@@ -1054,12 +1054,98 @@ header {
   }
 }
 
-/* Infinite animation */
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* EXPERIENCE */
+.experience-container {
+  width: 100%;
+  padding: 80px 25px;
+
+  .experience-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h2 {
+      font-family: var(--text-font-family);
+      font-size: 2rem;
+      color: var(--orange);
+    }
+  }
+
+  .experience-list ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    .list {
+      padding: 60px 0px;
+      display: flex;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .experience-org-logo {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .experience-org-details {
+      width: 80%;
+
+      h3 {
+        font-size: 1.5rem;
+        color: var(--blue-variant-2);
+        font-family: var(--text-font-family);
+        line-height: 1.5;
+      }
+
+      strong {
+        font-size: 16px;
+        line-height: 2;
+        font-family: var(--secondary-font-family);
+        color: var(--brown-variant-2);
+        font-weight: 400;
+      }
+
+      p,
+      li {
+        font-family: var(--primary-font-family);
+      }
+
+      ul {
+        list-style: circle;
+        list-style-position: inside;
+
+        li {
+          line-height: 2;
+        }
+      }
+    }
   }
 }
