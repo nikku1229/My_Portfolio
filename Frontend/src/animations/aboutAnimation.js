@@ -78,3 +78,38 @@ export const aboutBioAnimation = (aboutBio) => {
     y: 50,
   });
 };
+
+export const aboutBioSocialLinkAnimation = (link) => {
+  const link1Element = link.querySelector(".homebio-link1");
+  const link2Element = link.querySelector(".homebio-link2");
+  const link3Element = link.querySelector(".homebio-link3");
+  const link4Element = link.querySelector(".homebio-link4");
+
+  gsap.from(link1Element, {
+    y: -50,
+    duration: 2,
+    repeat: -1,
+    ease: "power3.out",
+  });
+
+  gsap.from(link2Element, {
+    x: -50,
+    duration: 2,
+    repeat: -1,
+    ease: "power3.out",
+  });
+
+  gsap.from(link3Element, {
+    y: 50,
+    duration: 2,
+    repeat: -1,
+    ease: "power3.out",
+  });
+
+  gsap.from(link4Element, {
+    x: 50,
+    duration: 2,
+    repeat: -1,
+    ease: "power3.out",
+  });
+};

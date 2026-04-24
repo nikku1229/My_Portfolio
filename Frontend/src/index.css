@@ -489,6 +489,32 @@ header {
   }
 }
 
+.home-bio-social-link {
+  width: 100%;
+  padding-top: 50px;
+
+  .link-list ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+    span {
+      overflow: hidden;
+    }
+
+    li a {
+      text-decoration: none;
+      color: var(--white-variant-1);
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}
+
 /* HOME-SCROLLER-SLIDER */
 .scroller-section {
   width: 100%;
@@ -1035,12 +1061,14 @@ header {
 }
 
 /* SKILLS SECTION */
-.skills-container {
+.skills-container,
+.certificate-container {
   width: 100%;
   padding: 10px 25px 40px 25px;
   overflow: hidden;
 
-  .skills-section {
+  .skills-section,
+  .certificates-section {
     display: flex;
     align-items: center;
     width: fit-content;
@@ -1057,6 +1085,21 @@ header {
     width: 120px;
     cursor: pointer;
   }
+
+  span {
+    width: 300px;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.certificate-container {
+  padding: 0px 25px 150px 25px;
 }
 
 @keyframes scroll {
