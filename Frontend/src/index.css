@@ -463,9 +463,12 @@ header {
 
 .bioAnimate-section {
   position: absolute;
-  width: 99vw;
+  width: 100vw;
   height: 60vh;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .semicircle {

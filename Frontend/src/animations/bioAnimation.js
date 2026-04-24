@@ -78,7 +78,6 @@ export const bioBackAnimation = (bioBack) => {
   tl.fromTo(
     semiCircle,
     {
-      x: "80%",
       y: "20%",
       scale: 2,
     },

@@ -48,7 +48,7 @@ function Thoughts() {
     <>
       <div className="thoughts-container" ref={quoteRef}>
         <div className="thought-head">
-          <h2>Quotes</h2>
+          <h2>#Quotes</h2>
         </div>
 
         {thoughts && thoughts.length > 0 ? (
