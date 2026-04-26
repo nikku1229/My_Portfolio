@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import ScrollerSlider from "../components/ScrollerSlider";
 import Thoughts from "../components/Thoughts";
+import GithubStats from "../components/GithubStats";
 import certificates from "../assets/certificates/certificates";
 
 const extendedCertificate = [...certificates, ...certificates];
@@ -194,7 +195,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-
+      <GithubStats />
       <Thoughts />
       <Footer />
     </>

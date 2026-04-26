@@ -1140,7 +1140,7 @@ header {
 }
 
 .certificate-container {
-  padding: 0px 25px 150px 25px;
+  padding: 0px 25px 0px 25px;
 }
 
 @keyframes scroll {
@@ -1236,5 +1236,38 @@ header {
         }
       }
     }
+  }
+}
+
+.github-stats-container {
+  width: 100%;
+  padding: 150px 25px;
+
+  .github-stats-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .github-contrubution-graph {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h3 {
+      font-size: 2rem;
+      font-family: var(--text-font-family);
+      color: var(--orange);
+    }
+  }
+
+  .github-contribution {
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
   }
 }

@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { getThoughts } from "../service/thoughtsApi";
-import { useAnchor } from "../context/AnchorContext";
 
 function Thoughts() {
-  const { quoteRef } = useAnchor();
   const [index, setIndex] = useState(0);
   const [thoughts, setThoughts] = useState([]);
 
@@ -46,7 +44,7 @@ function Thoughts() {
 
   return (
     <>
-      <div className="thoughts-container" ref={quoteRef}>
+      <div className="thoughts-container">
         <div className="thought-head">
           <h2>#Quotes</h2>
         </div>

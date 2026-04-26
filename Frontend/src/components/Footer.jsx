@@ -108,7 +108,7 @@ function Footer() {
                   className="link7"
                   onClick={() => handleAnchorClick("/", "quotes")}
                 >
-                  Quotes
+                  Github Stats
                 </span>
               </li>
             </ul>
