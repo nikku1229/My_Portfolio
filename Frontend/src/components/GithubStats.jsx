@@ -17,21 +17,27 @@ function GithubStats() {
           </div>
 
           <div className="github-contribution">
-            <img
-              src="https://github-readme-stats.vercel.app/api?username=nikku1229&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=111111&title_color=e87f24&icon_color=e87f24&text_color=ffffff&rank_icon=github"
-              height="200"
-              alt="GitHub Stats"
-            />
-            <img
-              src="https://github-readme-streak-stats.herokuapp.com/?user=nikku1229&theme=tokyonight&hide_border=true&background=111111&ring=e87f24&fire=e87f24&currStreakLabel=e87f24&sideLabels=e87f24&"
-              height="200"
-              alt="GitHub Streak"
-            />
-            <img
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=nikku1229&layout=donut&theme=tokyonight&hide_border=true&bg_color=111111&title_color=e87f24&text_color=fffce1&langs_count=8"
-              height="200"
-              alt="Top Languages"
-            />
+            <span>
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=nikku1229&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=111111&title_color=e87f24&icon_color=e87f24&text_color=ffffff&rank_icon=github"
+                height="200"
+                alt="GitHub Stats"
+              />
+            </span>
+            <span>
+              <img
+                src="https://github-readme-streak-stats.herokuapp.com/?user=nikku1229&theme=tokyonight&hide_border=true&background=111111&ring=e87f24&fire=e87f24&currStreakLabel=e87f24&sideLabels=e87f24&"
+                height="200"
+                alt="GitHub Streak"
+              />
+            </span>
+            <span>
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=nikku1229&layout=donut&theme=tokyonight&hide_border=true&bg_color=111111&title_color=e87f24&text_color=fffce1&langs_count=8"
+                height="200"
+                alt="Top Languages"
+              />
+            </span>
           </div>
         </div>
       </div>
