@@ -1392,6 +1392,10 @@ header {
     align-items: center;
     justify-content: center;
 
+    span {
+      overflow: hidden;
+    }
+
     .project-details {
       width: 100%;
       height: 100%;

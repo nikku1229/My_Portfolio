@@ -64,11 +64,15 @@ function ProjectList() {
 
               <ul className="project-features">
                 <h3>Feature</h3>
-                <li>Create private rooms with password protection.</li>
-                <li>Live user location updates using Geolocation API.</li>
-                <li>Interactive map with markers.</li>
-                <li>Online/offline user status.</li>
-                <li>Distance calculation between users.</li>
+                <li className="f-l">
+                  Create private rooms with password protection.
+                </li>
+                <li className="f-l">
+                  Live user location updates using Geolocation API.
+                </li>
+                <li className="f-l">Interactive map with markers.</li>
+                <li className="f-l">Online/offline user status.</li>
+                <li className="f-l">Distance calculation between users.</li>
               </ul>
 
               <div className="project-tech-stacks">
@@ -76,22 +80,22 @@ function ProjectList() {
                 <span>
                   <h4>Frontend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>React</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Leaflet(Map)</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Socket.io Client</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Axios</p>
                       </span>
@@ -101,17 +105,17 @@ function ProjectList() {
                 <span>
                   <h4>Backend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Express</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>JWT Authentication</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>SendGrid</p>
                       </span>
@@ -121,7 +125,7 @@ function ProjectList() {
                 <span>
                   <h4>Database</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>MongoDB </p>
                       </span>
@@ -131,22 +135,22 @@ function ProjectList() {
                 <span>
                   <h4>Deployment</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Vercel</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Render</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Thunder Client</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>MongoDB Atlas</p>
                       </span>
@@ -206,12 +210,18 @@ function ProjectList() {
 
               <ul className="project-features">
                 <h3>Feature</h3>
-                <li>Create and join rooms using secure room codes.</li>
-                <li>Password protected rooms.</li>
-                <li>Real-time file transfer (P2P-like behavior).</li>
-                <li>File sharing with progress indicators.</li>
-                <li>Files stored temporarily for download.</li>
-                <li>System notifications when users join/leave.</li>
+                <li className="f-l">
+                  Create and join rooms using secure room codes.
+                </li>
+                <li className="f-l">Password protected rooms.</li>
+                <li className="f-l">
+                  Real-time file transfer (P2P-like behavior).
+                </li>
+                <li className="f-l">File sharing with progress indicators.</li>
+                <li className="f-l">Files stored temporarily for download.</li>
+                <li className="f-l">
+                  System notifications when users join/leave.
+                </li>
               </ul>
 
               <div className="project-tech-stacks">
@@ -219,17 +229,17 @@ function ProjectList() {
                 <span>
                   <h4>Frontend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>React</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Socket.io Client</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Axios</p>
                       </span>
@@ -239,12 +249,12 @@ function ProjectList() {
                 <span>
                   <h4>Backend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Node</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Express</p>
                       </span>
@@ -254,7 +264,7 @@ function ProjectList() {
                 <span>
                   <h4>Database</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>LocalStorage</p>
                       </span>
@@ -264,7 +274,7 @@ function ProjectList() {
                 <span>
                   <h4>Deployment</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Vercel</p>
                       </span>
@@ -319,12 +329,14 @@ function ProjectList() {
 
               <ul className="project-features">
                 <h3>Feature</h3>
-                <li>Register and log in securely.</li>
-                <li>Create, edit, delete, and manage diary entries.</li>
-                <li>Auto-save notes while typing.</li>
-                <li>Search through personal entries.</li>
-                <li>Reset forgotten passwords via email.</li>
-                <li>Access their diary from any device.</li>
+                <li className="f-l">Register and log in securely.</li>
+                <li className="f-l">
+                  Create, edit, delete, and manage diary entries.
+                </li>
+                <li className="f-l">Auto-save notes while typing.</li>
+                <li className="f-l">Search through personal entries.</li>
+                <li className="f-l">Reset forgotten passwords via email.</li>
+                <li className="f-l">Access their diary from any device.</li>
               </ul>
 
               <div className="project-tech-stacks">
@@ -332,12 +344,12 @@ function ProjectList() {
                 <span>
                   <h4>Frontend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>React</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Axios</p>
                       </span>
@@ -347,27 +359,27 @@ function ProjectList() {
                 <span>
                   <h4>Backend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Node</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Express</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Authentication</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>JWT (JSON Web Token)</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>bcrypt (Password Hashing)</p>
                       </span>
@@ -377,12 +389,12 @@ function ProjectList() {
                 <span>
                   <h4>Database</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>MongoDB</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>SendGrid</p>
                       </span>
@@ -392,17 +404,17 @@ function ProjectList() {
                 <span>
                   <h4>Deployment</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Vercel</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Render</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Github</p>
                       </span>
@@ -456,13 +468,13 @@ function ProjectList() {
 
               <ul className="project-features">
                 <h3>Feature</h3>
-                <li>Dice rolling system (1–100).</li>
-                <li>Multiplayer support.</li>
-                <li>Dynamic dare generation from database.</li>
-                <li>Category-based dare selection.</li>
-                <li>Multiple game types (customizable).</li>
-                <li>Smooth animations and transitions.</li>
-                <li>Rate limiting & backend security.</li>
+                <li className="f-l">Dice rolling system (1–100).</li>
+                <li className="f-l">Multiplayer support.</li>
+                <li className="f-l">Dynamic dare generation from database.</li>
+                <li className="f-l">Category-based dare selection.</li>
+                <li className="f-l">Multiple game types (customizable).</li>
+                <li className="f-l">Smooth animations and transitions.</li>
+                <li className="f-l">Rate limiting & backend security.</li>
               </ul>
 
               <div className="project-tech-stacks">
@@ -470,17 +482,17 @@ function ProjectList() {
                 <span>
                   <h4>Frontend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>React</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Axios</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Context API (State Management)</p>
                       </span>
@@ -490,17 +502,17 @@ function ProjectList() {
                 <span>
                   <h4>Backend</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Node</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Express</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Authorization</p>
                       </span>
@@ -510,7 +522,7 @@ function ProjectList() {
                 <span>
                   <h4>Database</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>MongoDB</p>
                       </span>
@@ -520,12 +532,12 @@ function ProjectList() {
                 <span>
                   <h4>Deployment</h4>
                   <ul>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Vercel</p>
                       </span>
                     </li>
-                    <li>
+                    <li className="f-l">
                       <span>
                         <p>Render</p>
                       </span>
