@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
+import Hobbies from "../components/Hobbies";
 import { useAnchor } from "../context/AnchorContext";
 import {
   aboutAnimation,
@@ -141,6 +142,7 @@ function About() {
       <Experience />
       <Skills />
       <Education />
+      <Hobbies />
       <Footer />
     </>
   );
