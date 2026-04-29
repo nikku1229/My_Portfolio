@@ -13,7 +13,8 @@ export const getThoughts = async (req, res) => {
 export const addThoughts = async (req, res) => {
   try {
     const { content, createdBy } = req.body;
-    if (!content) return;
+    if (!content)
+      return res.status(400).json({ message: "Content is required" });
 
     const thought = await Thoughts.create({
       content,
@@ -39,5 +40,24 @@ export const deleteThought = async (req, res) => {
     res.status(200).json({ message: "Delete successful" });
   } catch (err) {
     res.status(400).json({ message: "Failed to delete" });
+  }
+};
+
+export const updateThought = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { content } = req.body;
+
+    const updated = await Thoughts.findOneAndUpdate(
+      { _id: id },
+      { $set: { content } },
+      { returnDocument: "after" },
+    );
+
+    if (!updated) return res.status(404).json({ message: "Thought not found" });
+
+    res.status(200).json({ message: "Update Successful" });
+  } catch (err) {
+    res.status(400).json({ message: "Failed to Update" });
   }
 };

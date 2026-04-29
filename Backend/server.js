@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import thoughtsRoute from "./routes/thoughtsRoute.js";
+import projectsRoute from "./routes/projectRoute.js";
 
 const app = express();
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(
 );
 
 app.use("/api", thoughtsRoute);
+app.use("/api", projectsRoute);
 
 app.get("/", (req, res) => res.send("Backend running"));
 

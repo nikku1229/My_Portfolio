@@ -3,8 +3,11 @@ import Footer from "../components/Footer";
 import ProjectHero from "../components/project/ProjectHero";
 import ProjectList from "../components/project/ProjectList";
 import OtherProjects from "../components/project/OtherProjects";
+import useProjects from "../hooks/useProjects";
 
 function Projects() {
+  const { projects } = useProjects();
+
   return (
     <>
       <Header />
@@ -32,12 +35,12 @@ function Projects() {
             </svg>
           </div>
         </div>
-        <ProjectList />
+        <ProjectList projects={projects} />
       </div>
       <div className="other-projects-container">
         <div className="other-projects-category-section">
           <h2>#Other Projects</h2>
-          <OtherProjects />
+          <OtherProjects projects={projects} />
         </div>
       </div>
       <Footer />

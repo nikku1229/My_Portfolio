@@ -1,14 +1,26 @@
 import React from "react";
 
-function OtherProjects() {
+function OtherProjects({ projects = [] }) {
+  const otherProject = projects.filter((p) => !p.featured);
+
   return (
     <>
       <div className="other-project-list">
-        <div className="other-projects">
+        {otherProject &&
+          otherProject.map((project, index) => (
+            <div className="other-projects" key={project._id}>
+              <h3>{project.projectName}</h3>
+            </div>
+          ))}
+
+        {/* <div className="other-projects">
           <h3>ProjectFlow</h3>
         </div>
         <div className="other-projects">
           <h3>Placement-Cell</h3>
+        </div>
+        <div className="other-projects">
+          <h3>Local Ai Assistant</h3>
         </div>
         <div className="other-projects">
           <h3>Chess</h3>
@@ -30,7 +42,7 @@ function OtherProjects() {
         </div>
         <div className="other-projects">
           <h3>Calculator</h3>
-        </div>
+        </div> */}
       </div>
     </>
   );
