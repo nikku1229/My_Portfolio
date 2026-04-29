@@ -1,6 +1,6 @@
 import React from "react";
-import skillsLogos from "../assets/skill_logos/LogoSkills";
-import { useAnchor } from "../context/AnchorContext";
+import skillsLogos from "../../assets/skill_logos/LogoSkills";
+import { useAnchor } from "../../context/AnchorContext";
 
 const extendedLogos = [...skillsLogos, ...skillsLogos];
 

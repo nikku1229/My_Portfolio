@@ -1,5 +1,5 @@
 import React from "react";
-import { useAnchor } from "../context/AnchorContext";
+import { useAnchor } from "../../context/AnchorContext";
 
 function GithubStats() {
   const { quoteRef } = useAnchor();

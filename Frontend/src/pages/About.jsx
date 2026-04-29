@@ -2,15 +2,15 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Education from "../components/Education";
-import Skills from "../components/Skills";
-import Experience from "../components/Experience";
-import Hobbies from "../components/Hobbies";
+import Education from "../components/about/Education";
+import Skills from "../components/about/Skills";
+import Experience from "../components/about/Experience";
+import Hobbies from "../components/about/Hobbies";
 import { useAnchor } from "../context/AnchorContext";
 import {
   aboutAnimation,
   aboutBioAnimation,
-} from "../animations/aboutAnimation";
+} from "../animations/about/aboutAnimation";
 import gsap from "gsap";
 
 function About() {

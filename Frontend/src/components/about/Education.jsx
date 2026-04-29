@@ -2,9 +2,9 @@ import React, { useState, useLayoutEffect, useRef, useEffect } from "react";
 import {
   tabAnimation,
   tabContentAnimation,
-} from "../animations/educationAnimation";
+} from "../../animations/about/educationAnimation";
 import gsap from "gsap";
-import { useAnchor } from "../context/AnchorContext";
+import { useAnchor } from "../../context/AnchorContext";
 
 function Education() {
   const tabRef = useRef(null);

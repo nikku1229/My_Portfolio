@@ -4,9 +4,9 @@ import {
   lastNameAnimation,
   flowerAnimation,
   scrollFlowerAnimation,
-} from "../animations/homeAnimation";
+} from "../../animations/home/homeAnimation";
 import gsap from "gsap";
-import NameBlock from "./NameBlock";
+import NameBlock from "../NameBlock";
 
 function Hero() {
   const firstNameRef = useRef();

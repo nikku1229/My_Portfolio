@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import { heroAnimation } from "../animations/homeAnimation";
+import { heroAnimation } from "../animations/home/homeAnimation";
 import gsap from "gsap";
 import "../nameBlock.css";
 

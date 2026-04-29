@@ -1,7 +1,8 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectHero from "../components/ProjectHero";
-import ProjectList from "../components/ProjectList";
+import ProjectHero from "../components/project/ProjectHero";
+import ProjectList from "../components/project/ProjectList";
+import OtherProjects from "../components/project/OtherProjects";
 
 function Projects() {
   return (
@@ -36,6 +37,7 @@ function Projects() {
       <div className="other-projects-container">
         <div className="other-projects-category-section">
           <h2>#Other Projects</h2>
+          <OtherProjects />
         </div>
       </div>
       <Footer />

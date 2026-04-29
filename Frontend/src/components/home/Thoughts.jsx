@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getThoughts } from "../service/thoughtsApi";
+import { getThoughts } from "../../service/thoughtsApi";
 
 function Thoughts() {
   const [index, setIndex] = useState(0);

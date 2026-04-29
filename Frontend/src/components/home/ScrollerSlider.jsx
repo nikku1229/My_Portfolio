@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import { scrollerAnimation } from "../animations/scrollerAnimation";
+import { scrollerAnimation } from "../../animations/home/scrollerAnimation";
 
 function ScrollerSlider() {
   const scrollerRef = useRef();
