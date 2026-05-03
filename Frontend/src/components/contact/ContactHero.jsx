@@ -16,20 +16,16 @@ function ContactHero() {
     return () => ctx.revert();
   }, [reason]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     try {
-      const res = await formSubmit({ ...formData, reason });
-
-      if (res.status === 200) {
-        alert("Thank you! Message sent successfully ✅");
-        setFormData({});
-      } else {
-        alert("Something went wrong ❌");
-      }
+      formSubmit({ ...formData, reason });
+      alert("Message sent successfully");
+      setFormData({});
     } catch (err) {
       console.error(err);
+      alert("Failed to send");
     }
   };
 
@@ -47,6 +43,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="name"
+                value={formData.name || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -61,6 +58,7 @@ function ContactHero() {
                 className="input"
                 type="email"
                 id="email"
+                value={formData.email || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -73,6 +71,7 @@ function ContactHero() {
               </label>
               <textarea
                 className="input"
+                value={formData.desc || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, desc: e.target.value })
                 }
@@ -94,6 +93,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="name"
+                value={formData.name || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -108,6 +108,7 @@ function ContactHero() {
                 className="input"
                 type="email"
                 id="email"
+                value={formData.email || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -121,6 +122,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="department"
+                value={formData.department || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, department: e.target.value })
                 }
@@ -134,6 +136,7 @@ function ContactHero() {
                 className="input"
                 type="number"
                 id="budget"
+                value={formData.budget || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, budget: e.target.value })
                 }
@@ -146,6 +149,7 @@ function ContactHero() {
               <textarea
                 className="input"
                 id="desc"
+                value={formData.desc || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, desc: e.target.value })
                 }
@@ -167,6 +171,7 @@ function ContactHero() {
                 className="input"
                 type="email"
                 id="email"
+                value={formData.email || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -181,6 +186,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="subject"
+                value={formData.subject || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, subject: e.target.value })
                 }
@@ -194,6 +200,7 @@ function ContactHero() {
               <textarea
                 className="input"
                 id="message"
+                value={formData.message || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
@@ -215,6 +222,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="name"
+                value={formData.name || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -229,6 +237,7 @@ function ContactHero() {
                 className="input"
                 type="text"
                 id="company-name"
+                value={formData.company_name || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, company_name: e.target.value })
                 }
@@ -243,6 +252,7 @@ function ContactHero() {
                 className="input"
                 type="email"
                 id="email"
+                value={formData.email || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -257,6 +267,7 @@ function ContactHero() {
                 className="input"
                 type="number"
                 id="budget"
+                value={formData.budget || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, budget: e.target.value })
                 }
@@ -269,6 +280,7 @@ function ContactHero() {
               <textarea
                 className="input"
                 id="desc"
+                value={formData.desc || ""}
                 onChange={(e) =>
                   setFormData({ ...formData, desc: e.target.value })
                 }
