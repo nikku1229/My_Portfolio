@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import thoughtsRoute from "./routes/thoughtsRoute.js";
 import projectsRoute from "./routes/projectRoute.js";
 import contactRoute from "./routes/contactRoute.js";
+import likeRoute from "./routes/likeRoute.js";
 
 const app = express();
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(
 app.use("/api", thoughtsRoute);
 app.use("/api", projectsRoute);
 app.use("/api", contactRoute);
+app.use("/api", likeRoute);
 
 app.get("/", (req, res) => res.send("Backend running"));
 
