@@ -14,6 +14,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ["three"], // ← yeh important hai, three ko pre-bundle mat karo
+    exclude: ["three"],
   },
 });

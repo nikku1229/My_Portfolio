@@ -2,7 +2,10 @@ import { useLayoutEffect, useRef, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import gsap from "gsap";
 import { useAnchor } from "../context/AnchorContext";
-import { bioAnimation, bioBackAnimation } from "../animations/home/bioAnimation";
+import {
+  bioAnimation,
+  bioBackAnimation,
+} from "../animations/home/bioAnimation";
 import { aboutBioSocialLinkAnimation } from "../animations/about/aboutAnimation";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
