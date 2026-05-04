@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import Lenis from "@studio-freight/lenis";
 import App from "./App.jsx";
 import { AnchorProvider } from "./context/AnchorContext.jsx";
+import { ToastProvider } from "./context/ToastContext.jsx";
 import "./index.css";
 
 const lenis = new Lenis({
@@ -18,7 +19,9 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 createRoot(document.getElementById("root")).render(
-  <AnchorProvider>
-    <App />
-  </AnchorProvider>,
+  <ToastProvider>
+    <AnchorProvider>
+      <App />
+    </AnchorProvider>
+  </ToastProvider>,
 );

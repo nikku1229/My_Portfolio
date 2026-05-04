@@ -2,11 +2,14 @@ import { useState, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { formAnimation } from "../../animations/contact/formAnimation";
 import { formSubmit } from "../../service/contactFormApi";
+import { useToast } from "../../context/ToastContext";
+import Toast from "../Toast";
 
 function ContactHero() {
   const formRef = useRef(null);
   const [reason, setReason] = useState("general");
   const [formData, setFormData] = useState({});
+  const { showToast, toast } = useToast();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -21,11 +24,11 @@ function ContactHero() {
 
     try {
       formSubmit({ ...formData, reason });
-      alert("Message sent successfully");
+      showToast("Message sent successfully");
       setFormData({});
     } catch (err) {
       console.error(err);
-      alert("Failed to send");
+      showToast("Failed to send");
     }
   };
 
@@ -298,6 +301,7 @@ function ContactHero() {
   return (
     <>
       <div className="contact-page-container" ref={formRef}>
+        {toast && <Toast />}
         <div className="contact-hero-section">
           <div className="reason-section">
             <label className="label">Reason of Contact</label>

@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAnchor } from "../context/AnchorContext";
+import { useToast } from "../context/ToastContext";
 import { getLike, addLike } from "../service/likeApi";
+import Toast from "../components/Toast";
 
 function Footer() {
   const { scrollToSection } = useAnchor();
   const navigate = useNavigate();
   const location = useLocation();
+  const { toast, showToast } = useToast();
 
   const [message, setMessage] = useState("");
   const [likes, setLikes] = useState(0);
@@ -14,8 +17,7 @@ function Footer() {
 
   const handleMessageSubmission = (e) => {
     e.preventDefault();
-
-    alert("message send successful");
+    showToast("message send successfully");
     setMessage("");
   };
 
@@ -56,14 +58,15 @@ function Footer() {
   return (
     <>
       <div className="footer-container">
+        {toast && <Toast message={toast} />}
         <div className="footer-section">
           <div className="footer-form">
             <h2>Feel Free to contact</h2>
             <form onSubmit={handleMessageSubmission}>
               <input
-                type="email"
-                name="email"
-                placeholder="Enter Email Id"
+                type="text"
+                name="message"
+                placeholder="Enter message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required

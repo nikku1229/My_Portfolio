@@ -701,6 +701,7 @@ header {
   gap: 50px;
   color: var(--dark-grey);
   align-items: center;
+  position: relative;
 
   .footer-section {
     width: 100%;
@@ -1681,6 +1682,7 @@ header {
 /* CONTACT PAGE */
 .contact-page-container {
   width: 100%;
+  position: relative;
 
   .contact-hero-section {
     width: 100%;
@@ -1808,10 +1810,45 @@ header {
 
     textarea {
       min-height: 150px;
+      min-width: 100%;
+      max-width: 100%;
     }
 
     button {
       max-width: 200px;
     }
+  }
+}
+
+/* Toast  */
+.toast-container {
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+  background-color: var(--dark);
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px dashed var(--orange);
+  width: max-content;
+  z-index: 9;
+  animation: toastPopUp 0.4s linear;
+
+  .toast {
+    display: flex;
+    align-items: center;
+    color: var(--white-variant-1);
+    gap: 10px;
+    font-family: var(--text-font-family);
+    text-transform: capitalize;
+  }
+}
+
+@keyframes toastPopUp {
+  0% {
+    transform: translateY(100px)
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
