@@ -549,8 +549,10 @@ header {
 
   h2 {
     font-size: 50vh;
-    color: var(--white-variant-1);
-    font-family: var(--primary-font-family);
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 10px var(--white-variant-1);
+    font-family: var(--secondary-font-family);
   }
 
   .tags-block:nth-child(1) {
