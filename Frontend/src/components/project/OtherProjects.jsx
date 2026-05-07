@@ -9,7 +9,7 @@ function OtherProjects({ projects = [] }) {
   return (
     <>
       <div className="other-project-list">
-        {otherProject ? (
+        {otherProject.length !== 0 ? (
           otherProject.map((project, index) => (
             <div
               className="other-projects"
