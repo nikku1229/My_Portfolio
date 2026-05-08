@@ -4,6 +4,7 @@ import Lenis from "@studio-freight/lenis";
 import App from "./App.jsx";
 import { AnchorProvider } from "./context/AnchorContext.jsx";
 import { ToastProvider } from "./context/ToastContext.jsx";
+import { LoaderProvider } from "./context/LoaderContext.jsx";
 import "./index.css";
 
 const lenis = new Lenis({
@@ -20,8 +21,10 @@ requestAnimationFrame(raf);
 
 createRoot(document.getElementById("root")).render(
   <ToastProvider>
-    <AnchorProvider>
-      <App />
-    </AnchorProvider>
+    <LoaderProvider>
+      <AnchorProvider>
+        <App />
+      </AnchorProvider>
+    </LoaderProvider>
   </ToastProvider>,
 );

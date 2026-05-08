@@ -5,8 +5,16 @@ import Projects from "./pages/Projects";
 import ProjectView from "./pages/ProjectView";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
+import SplashScreen from "./components/SplashScreen";
+import { useLoader } from "./context/LoaderContext";
 
 function App() {
+  const { loader } = useLoader();
+
+  if (loader) {
+    return <SplashScreen />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>

@@ -27,5 +27,10 @@ app.use("/api", contactRoute);
 app.use("/api", likeRoute);
 
 app.get("/", (req, res) => res.send("Backend running"));
+app.get("/api/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+  });
+});
 
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));

@@ -85,31 +85,36 @@ export const aboutBioSocialLinkAnimation = (link) => {
   const link3Element = link.querySelector(".homebio-link3");
   const link4Element = link.querySelector(".homebio-link4");
 
-  gsap.from(link1Element, {
-    y: -50,
-    duration: 2,
+  const tl = gsap.timeline({
     repeat: -1,
     ease: "power3.out",
+    defaults: {
+      duration: 1,
+    },
   });
 
-  gsap.from(link2Element, {
-    x: -50,
-    duration: 2,
-    repeat: -1,
-    ease: "power3.out",
-  });
-
-  gsap.from(link3Element, {
-    y: 50,
-    duration: 2,
-    repeat: -1,
-    ease: "power3.out",
-  });
-
-  gsap.from(link4Element, {
-    x: 50,
-    duration: 2,
-    repeat: -1,
-    ease: "power3.out",
-  });
+  tl.from(link1Element, {
+    y: -80,
+  })
+    .from(
+      link2Element,
+      {
+        x: -80,
+      },
+      "-=0.3",
+    )
+    .from(
+      link3Element,
+      {
+        y: 80,
+      },
+      "-=0.3",
+    )
+    .from(
+      link4Element,
+      {
+        x: 80,
+      },
+      "-=0.3",
+    );
 };
