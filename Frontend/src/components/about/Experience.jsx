@@ -1,9 +1,9 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
-import Experience1Logo from "../../assets/Img/adaan-logo.png";
-import Experience2Logo from "../../assets/Img/upskillmafia-logo.png";
-import Experience3Logo from "../../assets/Img/Freelence-logo.svg";
-import Experience4Logo from "../../assets/Img/codesoft-logo.png";
+import Experience1Logo from "../../assets/Logo/adaan-logo.png";
+import Experience2Logo from "../../assets/Logo/upskillmafia-logo.png";
+import Experience3Logo from "../../assets/Logo/Freelence-logo.svg";
+import Experience4Logo from "../../assets/Logo/codesoft-logo.png";
 import gsap from "gsap";
 import { experienceListAnimation } from "../../animations/about/experienceAnimation";
 import { useAnchor } from "../../context/AnchorContext";

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/Img/Favicon.png";
+import Logo from "../assets/Logo/Favicon.png";
 
 function MobileView() {
   return (

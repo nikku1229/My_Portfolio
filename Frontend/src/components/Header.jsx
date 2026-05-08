@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navAnimation } from "../animations/headerAnimation";
 import gsap from "gsap";
-import Logo from "../assets/Img/Favicon.png";
+import Logo from "../assets/Logo/Favicon.png";
 import Resume from "../assets/pdf/NitishSharmaResume.pdf";
 
 function Header() {
