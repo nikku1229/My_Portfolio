@@ -9,9 +9,9 @@ import SplashScreen from "./components/SplashScreen";
 import { useLoader } from "./context/LoaderContext";
 
 function App() {
-  const { loader } = useLoader();
+  const { splashLoader } = useLoader();
 
-  if (loader) {
+  if (splashLoader) {
     return <SplashScreen />;
   }
 

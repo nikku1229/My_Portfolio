@@ -4,7 +4,8 @@ import API from "../service/api";
 const LoaderContext = createContext();
 
 export const LoaderProvider = ({ children }) => {
-  const [loader, setLoader] = useState(true);
+  const [splashLoader, setSplashLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     let interval;
@@ -17,7 +18,7 @@ export const LoaderProvider = ({ children }) => {
           clearInterval(interval);
 
           setTimeout(() => {
-            setLoader(false);
+            setSplashLoader(false);
           }, 5000);
         }
       } catch (error) {
@@ -33,7 +34,7 @@ export const LoaderProvider = ({ children }) => {
   }, []);
 
   return (
-    <LoaderContext.Provider value={{ loader }}>
+    <LoaderContext.Provider value={{ splashLoader, loader, setLoader }}>
       {children}
     </LoaderContext.Provider>
   );

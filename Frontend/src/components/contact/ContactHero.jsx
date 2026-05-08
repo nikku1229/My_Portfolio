@@ -216,7 +216,7 @@ function ContactHero() {
       case "freelance":
         return (
           <div className="form-section">
-            <h3>General Inquiry</h3>
+            <h3>Freelance Project</h3>
             <div className="input-section">
               <label className="label" htmlFor="name">
                 Your Name<span>*</span>
