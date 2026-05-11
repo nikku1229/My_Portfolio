@@ -4,6 +4,7 @@ import Experience1Logo from "../../assets/Logo/adaan-logo.png";
 import Experience2Logo from "../../assets/Logo/upskillmafia-logo.png";
 import Experience3Logo from "../../assets/Logo/Freelence-logo.svg";
 import Experience4Logo from "../../assets/Logo/codesoft-logo.png";
+import Experience5Logo from "../../assets/Logo/travsetgo-logo.png";
 import gsap from "gsap";
 import { experienceListAnimation } from "../../animations/about/experienceAnimation";
 import { useAnchor } from "../../context/AnchorContext";
@@ -30,6 +31,39 @@ function Experience() {
             <ul>
               <li className="list">
                 <div className="experience-org-logo">
+                  <Link to="https://www.travsetgo.com/" target="_blank">
+                    <img src={Experience5Logo} alt="TravsetGo" />
+                  </Link>
+                </div>
+
+                <div className="experience-org-details">
+                  <h3 className="content-animate">Junior Developer</h3>
+                  <strong className="content-animate">TravsetGo</strong>
+                  <p className="content-animate">May 2026 - Present</p>
+                  <ul>
+                    <li className="content-animate">
+                      Driving digital transformation within the organization by
+                      building robust internal tools with React and React
+                      Native.
+                    </li>
+                    <li className="content-animate">
+                      I focus on optimizing application performance, ensuring
+                      cross-platform compatibility, and streamlining internal
+                      workflows through agile project management.
+                    </li>
+                    <li className="content-animate">
+                      I am dedicated to writing clean, maintainable code and
+                      implementing efficient management strategies that improve
+                      team productivity and project delivery speed.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <div className="seperator"></div>
+
+              <li className="list">
+                <div className="experience-org-logo">
                   <Link to="https://www.adaan.com/" target="_blank">
                     <img src={Experience1Logo} alt="Adaan digital solutions" />
                   </Link>
@@ -43,6 +77,11 @@ function Experience() {
                   <p className="content-animate">June 2025 - Mar 2026</p>
                   <ul>
                     <li className="content-animate">
+                      rchitected and maintained scalable enterprise web
+                      applications using Node.js, Express.js, React.js, and
+                      serving 500+ concurrent users.
+                    </li>
+                    <li className="content-animate">
                       Develop and maintain client websites on WordPress (Partner
                       Trinity) and Duda ecosystems, ensuring pixel-perfect UI
                       delivery.
@@ -50,10 +89,6 @@ function Experience() {
                     <li className="content-animate">
                       Collaborate with design and marketing teams to build
                       conversion-optimized landing pages and SaaS dashboards.
-                    </li>
-                    <li className="content-animate">
-                      Integrate third-party APIs and automation tools to
-                      streamline client workflows.
                     </li>
                     <li className="content-animate">
                       Lead frontend development sprints and conduct code reviews
