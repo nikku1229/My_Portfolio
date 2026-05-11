@@ -77,7 +77,7 @@ function Experience() {
                   <p className="content-animate">June 2025 - Mar 2026</p>
                   <ul>
                     <li className="content-animate">
-                      rchitected and maintained scalable enterprise web
+                      Architected and maintained scalable enterprise web
                       applications using Node.js, Express.js, React.js, and
                       serving 500+ concurrent users.
                     </li>
